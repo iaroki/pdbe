@@ -1,0 +1,18 @@
+internal 10.4.41.25
+external 10.69.0.5
+nserver 8.8.8.8
+nserver 10.69.0.10
+nscache 327680
+
+daemon
+
+maxconn 300
+
+# 1kl
+flush
+auth iponly
+allow * * * 21192 *
+udppm 21192 193.200.205.195 1192
+
+proxy -p2589 -a -t -n
+
